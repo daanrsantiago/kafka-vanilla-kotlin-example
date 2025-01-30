@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  broker:
+    image: apache/kafka:3.9.0
+    hostname: broker
+    container_name: broker
+    ports:
+      - "9092:9092"
+    volumes:
+      - ./broker/data:/var/lib/kafka/data
